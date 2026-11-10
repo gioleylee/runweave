@@ -1,0 +1,15 @@
+{
+  "steps": {
+    "normalize": {
+      "command": ["{python}", "normalize.py"],
+      "inputs": ["normalize.py", "raw.csv"],
+      "outputs": ["normalized.csv"]
+    },
+    "report": {
+      "deps": ["normalize"],
+      "command": ["{python}", "report.py"],
+      "inputs": ["report.py"],
+      "outputs": ["summary.json"]
+    }
+  }
+}
